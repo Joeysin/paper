@@ -121,7 +121,7 @@ public class CompetableFuture {
             }
             return o;
         }).collect(Collectors.toList());
-        System.out.printf("Processed %d sequential tasks in %d millis\n", list.size(), System.currentTimeMillis() - s1);
+        System.out.printf("Processed %d sequential tasks in %d millis", list.size(), System.currentTimeMillis() - s1);
 
         //14.2  测试并行stream
         long s2 = System.currentTimeMillis();
@@ -133,7 +133,7 @@ public class CompetableFuture {
             }
             return o;
         }).collect(Collectors.toList());
-        System.out.printf("Processed %d parallel tasks in %d millis\n", list.size(), System.currentTimeMillis() - s2);
+        System.out.printf("Processed %d parallel tasks in %d millis", list.size(), System.currentTimeMillis() - s2);
 
         //14.3 测试CompetableFuture  join()和get() join()不会抛出exception更加适合lambda表达式，而个get()会
         //14.4 不会堵塞主线程
@@ -154,7 +154,7 @@ public class CompetableFuture {
         list = futures.stream().map(f -> {
             return f.join();
         }).collect(Collectors.toList());
-        System.out.printf("Processed %d competableFuture  tasks in %d millis\n", list.size(), System.currentTimeMillis() - s3);
+        System.out.printf("Processed %d competableFuture  tasks in %d millis", list.size(), System.currentTimeMillis() - s3);
         executorService.shutdown();
     }
 }
