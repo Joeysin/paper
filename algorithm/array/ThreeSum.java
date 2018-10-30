@@ -1,4 +1,4 @@
-package com.joeysin.paper.algorithm;
+package com.joeysin.paper.algorithm.array;
 
 import java.util.ArrayList;
 import java.util.Arrays;

@@ -1,4 +1,4 @@
-package com.joeysin.paper.algorithm;
+package com.joeysin.paper.algorithm.stack;
 
 import java.util.HashMap;
 import java.util.Stack;

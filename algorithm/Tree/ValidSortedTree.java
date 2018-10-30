@@ -1,4 +1,6 @@
-package com.joeysin.paper.algorithm;
+package com.joeysin.paper.algorithm.Tree;
+
+import com.joeysin.paper.algorithm.Tree.TreeNode;
 
 /**
  * Created by Joeysin on  2018/10/29  13:44.

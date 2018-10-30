@@ -12,20 +12,22 @@ public class DivideTwoNum {
 
     /**
      * Created by Joeysin on  2018/10/24  13:48.
-     * Describe：[] ] ]   ]
+     * Describe：[] ] ]      ]
      */
     public static int divide(int dividend, int divisor) {
         if (dividend == Integer.MIN_VALUE && divisor == -1) {
             return Integer.MAX_VALUE;
         }
-        long a = Math.abs((long) dividend);
-        long b = Math.abs((long) divisor);
-        int count = 0;
-        long sum;
-        while (b <= a) {
+        //绝对值
+        long a = Math.abs((long) dividend);//被除数
+        long b = Math.abs((long) divisor);//除数
+        int count = 0; //次数
+        long sum;//val + val
+        while (b <= a) {// |除数| 小于等于 |被除数|
+            //外层控制 ➗ 一次divisor，内层控制➗ 多次
             sum = b;
             int countβ = 1;
-            // n / n ^ 2
+            // n / n ^ 2 指数相加，除数循环和自己相加，直到小于被除数
             while (sum + sum <= a) {
                 count += count;
                 sum += sum;
@@ -38,6 +40,8 @@ public class DivideTwoNum {
         }
         return count;
     }
+
+
     /**
      * Created by Joeysin on  2018/10/26  11:29.
      * Describe：倒转一个数字

@@ -1,7 +1,6 @@
-package com.joeysin.paper.algorithm;
+package com.joeysin.paper.algorithm.Tree;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 /**
@@ -44,16 +43,16 @@ public class LeadCode242 {
      * Describe：排序比较法
      */
     public static boolean isAnagram2(String s, String t) {
-        if(s.length() != t.length()) return false;
+        if (s.length() != t.length()) return false;
         int[] ch1 = new int[26];
-        for(int i = 0; i < s.length(); i++) {
-            char c1  = s.charAt(i);
+        for (int i = 0; i < s.length(); i++) {
+            char c1 = s.charAt(i);
             char c2 = t.charAt(i);
             ch1[c1 - 'a'] += 1;
             ch1[c2 - 'a'] -= 1;
         }
-        for(int i = 0; i < ch1.length; i++) {
-            if(ch1[i] != 0) return false;
+        for (int i = 0; i < ch1.length; i++) {
+            if (ch1[i] != 0) return false;
         }
         return true;
     }

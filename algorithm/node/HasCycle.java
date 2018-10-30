@@ -1,4 +1,4 @@
-package com.joeysin.paper.algorithm;
+package com.joeysin.paper.algorithm.node;
 
 import java.util.HashSet;
 import java.util.Set;

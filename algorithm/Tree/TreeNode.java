@@ -1,4 +1,4 @@
-package com.joeysin.paper.algorithm;
+package com.joeysin.paper.algorithm.Tree;
 
 import lombok.Data;
 

@@ -1,7 +1,5 @@
-package com.joeysin.paper.algorithm;
+package com.joeysin.paper.algorithm.Tree;
 
-
-import lombok.Data;
 
 import java.util.*;
 import java.util.concurrent.ConcurrentLinkedQueue;
@@ -51,26 +49,6 @@ public class FullBinaryTree {
         System.out.println(isSymmetric(treeNode));
     }
 
-    /**
-     * Created by Joeysin on  2018/10/24  14:40.
-     * Describe：遍历二叉树
-     */
-    public static void iteraror(TreeNode node, TreeNode left, TreeNode right, List one) {
-        if (left == null) {
-            System.out.println(-1);
-            if (right == null) {
-                System.out.println(-1);
-            }
-            return;
-        }
-//        System.out.println(node.val);
-        System.out.println(left.val);
-        System.out.println(right.val);
-
-        iteraror(left, left.left, left.right, one);
-        iteraror(right, right.left, right.right, one);
-    }
-
 
     /**
      * Created by Joeysin on  2018/10/26  14:57.
@@ -115,16 +93,5 @@ public class FullBinaryTree {
         return (t1.val == t2.val)
                 && isMirror(t1.right, t2.left)
                 && isMirror(t1.left, t2.right);
-    }
-
-    @Data
-    public static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
     }
 }

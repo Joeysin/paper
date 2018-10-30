@@ -1,4 +1,4 @@
-package com.joeysin.paper.algorithm;
+package com.joeysin.paper.algorithm.array;
 
 /**
  * Created by Joeysin on  2018/10/19  16:13.
